@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student ID Card Generator</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #card-form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #card-form h2 {
+            margin-top: 0;
+        }
+
+        #card-form input[type="text"],
+        #card-form input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        #card-form button {
+            background-color: #4caf50;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #card-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        #card-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        #card-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="card-form">
+            <h2>Student ID Card Generator</h2>
+            <form id="id-card-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="college">College Name:</label>
+                    <input type="text" id="college" required>
+                </div>
+                <div>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" required>
+                </div>
+                <div>
+                    <label for="image">Upload Image:</label>
+                    <input type="file" id="image" accept="image/*" required>
+                </div>
+                <button type="submit">Generate Card</button>
+            </form>
+        </div>
+        <div id="card-container">
+            <h2>Student ID Card</h2>
+            <img id="card-image" src="#" alt="Student Image">
+            <div id="card-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
